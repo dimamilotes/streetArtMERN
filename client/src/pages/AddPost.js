@@ -52,7 +52,7 @@ function AddPost() {
             <input type='text' name='urlImg' placeholder='Post image' onChange={handleChande}/>
             <input type='text' name='link' placeholder='add link to author instagram or another site' onChange={handleChande}/>
             
-            <button onClick={()=> {history.push ('/')}} className='btn btnBlue'>save post</button>
+            <button type='onSubmit' onClick={()=> {history.push ('/')}} className='btn btnBlue'>save post</button>
           </form>
           
         </div>
