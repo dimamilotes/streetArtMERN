@@ -1,9 +1,11 @@
 import React, {useState }from 'react'
 import axios from 'axios'
+import { useHistory } from "react-router-dom";
 
 function AddPost() {
 
   const [form, setForm] = useState ({})
+  const [red, setRed] = useState (false)
 
 
   // console.log ('обновили стейт',form)
@@ -34,8 +36,12 @@ function AddPost() {
         // this.getBlogPost()
         console.log ('Данные отправлены на сервер')})
       .catch (() => {console.log ('Ошибка отправки данных на сервер')})
+
   }
+  let history = useHistory ()
+  
     return (
+      
       <div className='container'>
         <div className="postBox">
           <h3 className='postTitle'>Create a new post</h3>
@@ -46,7 +52,7 @@ function AddPost() {
             <input type='text' name='urlImg' placeholder='Post image' onChange={handleChande}/>
             <input type='text' name='link' placeholder='add link to author instagram or another site' onChange={handleChande}/>
             
-            <button className='btn btnBlue'>save post</button>
+            <button onClick={()=> {history.push ('/')}} className='btn btnBlue'>save post</button>
           </form>
           
         </div>
