@@ -38,7 +38,7 @@ function AddPost() {
       .catch (() => {console.log ('Ошибка отправки данных на сервер')})
 
   }
-  let history = useHistory ()
+  
   
     return (
       
@@ -52,7 +52,7 @@ function AddPost() {
             <input type='text' name='urlImg' placeholder='Post image' onChange={handleChande}/>
             <input type='text' name='link' placeholder='add link to author instagram or another site' onChange={handleChande}/>
             
-            <button type = "button" onClick={()=> {history.push ('/')}} className='btn btnBlue'>save post</button>
+            <button className='btn btnBlue'>save post</button>
           </form>
           
         </div>
