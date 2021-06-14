@@ -25,8 +25,8 @@ function AddPost() {
   }
 
 
-  const submit = () => {
-    
+  const submit = (event) => {
+    event.preventDefault()
     axios ({
       url: '/api/save',
       method: 'POST',
